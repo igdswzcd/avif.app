@@ -16,7 +16,7 @@
 
 .container {
   margin: 0;
-  padding-top: 10vh;
+  padding-top: 2vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -53,15 +53,18 @@ h1 {
   text-align: center;
 }
 
-input,
+
 button {
-  border-radius: 8px;
+  border-radius: 4px;
   border: 1px solid transparent;
-  padding: 0.6em 1.2em;
+  padding: 0.3em 0.6em;
   font-size: 1em;
+  vertical-align: middle;
   font-weight: 500;
   font-family: inherit;
   color: #0f0f0f;
+  display: inline-flex;
+  align-items: center;
   background-color: #ffffff;
   transition: border-color 0.25s;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
@@ -79,7 +82,7 @@ button:active {
   background-color: #e8e8e8;
 }
 
-input,
+
 button {
   outline: none;
 }
@@ -106,4 +109,35 @@ button {
   button:active {
     background-color: #0f0f0f69;
   }
+}
+table {
+  border: 1px solid;
+}
+table tr th {
+  border-right: 1px dashed;
+}
+table tr th:last-child {
+  border-right: none;
+}
+table tr td {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 50px;
+  border-right: 1px dashed;
+  border-top: 1px dashed;
+}
+table tr td:last-child {
+  border-right: none;
+}
+
+input {
+  width: 50px;
+  vertical-align: text-top;
+}
+
+.ctrls {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }

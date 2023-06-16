@@ -15,22 +15,36 @@
 
   <body>
     <div class="container">
-      <div class="ctrls">
-      <button id="add_src" type="submit">Add</button>
-      <button>Del</button>
-    </div>
-      <table>
+      <div class="ctrls" style="margin-bottom: 10px;">
+        <button id="add_src">Import</button>
+        <button>Remove</button>
+        <div>
+          <label for="dft_eft">默认压缩: </label>
+          <input type="number" min="0" max="100" step="5" name="dft_eft" id="dft_eft" value="30">
+        </div>
+        <div>
+          <label for="dft_qlty">默认质量: </label>
+          <input type="number" min="0" max="100" step="5" name="dft_qlty" id="dft_qlty" value="70">
+        </div>
+        <div>
+          <label for="dft_tspy">默认Alpha通道: </label>
+          <select id="dft_tspy">
+            <option value="keep" selected>保留</option>
+            <option value="drop">不保留</option>
+          </select>
+        </div>
+      </div>
+      <table id="img_table">
         <tr>
-          <th>Header1</th>
-          <th>Header2</th>
-        </tr>
-        <tr>
-          <td>Row1, Cell1</td>
-          <td>Row1, Cell2</td>
-        </tr>
-        <tr>
-          <td>Row2, Cell1</td>
-          <td>Row2, Cell2</td>
+          <th>图片</th>
+          <th>格式</th>
+          <th>压缩</th>
+          <th>无损</th>
+          <th>Alpha</th>
+          <th>转换</th>
+          <th>进度</th>
+          <th>结果</th>
+          <th>预览</th>
         </tr>
       </table>
     </div>
