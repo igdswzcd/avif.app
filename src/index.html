@@ -16,35 +16,62 @@
   <body>
     <div class="container">
       <div class="ctrls" style="margin-bottom: 10px;">
-        <button id="add_src">Import</button>
-        <button>Remove</button>
         <div>
-          <label for="dft_eft">默认压缩: </label>
-          <input type="number" min="0" max="100" step="5" name="dft_eft" id="dft_eft" value="30">
+          <label for="dft_eft">Default E: </label>
+          <input type="number" min="0" max="100" step="5" name="dft_eft" id="dft_eft" value="0">
         </div>
         <div>
-          <label for="dft_qlty">默认质量: </label>
+          <label for="dft_qlty">Default Q: </label>
           <input type="number" min="0" max="100" step="5" name="dft_qlty" id="dft_qlty" value="70">
         </div>
         <div>
-          <label for="dft_tspy">默认Alpha通道: </label>
+          <label for="dft_tspy">Default A: </label>
           <select id="dft_tspy">
-            <option value="keep" selected>保留</option>
-            <option value="drop">不保留</option>
+            <option value="keep" selected>KEEP</option>
+            <option value="drop">DROP</option>
           </select>
+        </div>
+        <div>
+          <label for="dft_parallel">Parallel Limit: </label>
+          <select id="dft_parallel">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6" selected>6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="dft_tspy">Viewer: </label>
+          <select id="dft_tspy">
+            <option value="keep" selected>Chrome</option>
+            <option value="drop" disabled>Later...</option>
+          </select>
+        </div>
+      </div>
+      <div class="ctrls" style="margin-bottom: 10px;">
+        <button id="add_src" disabled>Import</button>
+        <button id="rm_src" disabled>Remove</button>
+        <div>
+          <label id="save_path">*First Set Save Path: _</label>
+          <button id="set_save">Select</button>
         </div>
       </div>
       <table id="img_table">
         <tr>
-          <th>图片</th>
-          <th>格式</th>
-          <th>压缩</th>
-          <th>无损</th>
+          <th>IMG</th>
+          <th>FMT</th>
+          <th>Size</th>
+          <th>Effort</th>
+          <th>Quality</th>
           <th>Alpha</th>
-          <th>转换</th>
-          <th>进度</th>
-          <th>结果</th>
-          <th>预览</th>
+          <th>Rush</th>
+          <th>RES</th>
+          <th>Preview</th>
         </tr>
       </table>
     </div>
